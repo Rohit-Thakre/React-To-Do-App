@@ -1,0 +1,149 @@
+/* Root container */
+
+.warper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+
+.todo-container {
+  width: 70%;
+  height: auto;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  max-height: 90%; /* Max height before scrolling */
+  overflow-y: scroll;
+  scrollbar-width: None;
+}
+
+/* Title */
+.todo-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Input & Add Button Container */
+.todo-input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  position: sticky;
+  top: 0;
+}
+
+/* Input field */
+.todo-input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: white;
+  color: black;
+}
+
+.todo-input:focus {
+  border-color: #4caf50;
+}
+
+/* Button styling */
+.btn {
+  padding: 10px 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  white-space: nowrap;
+  /* Prevents button text from breaking */
+}
+
+/* Add Task Button */
+.btn-add {
+  background: #4caf50;
+  color: white;
+}
+
+.btn-add:hover {
+  background: #45a049;
+}
+
+/* Delete Button */
+.btn-delete {
+  background: #ff4d4d;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #cc0000;
+}
+
+/* Move Up & Down Buttons */
+.btn-move {
+  background: #007bff;
+  color: white;
+}
+
+.btn-move:hover {
+  background: #0056b3;
+}
+
+/* Todo List */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Todo Item */
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+  min-height: 50px;
+  word-break: break-word;
+  /* Ensures long words wrap instead of overflowing */
+}
+
+.todo-item:hover {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Handle very long task names */
+.todo-text {
+  flex: 1;
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+  word-wrap: break-word;
+  /* Breaks long words properly */
+  overflow-wrap: break-word;
+  max-width: 70%;
+  /* Prevents text from taking too much space */
+  white-space: normal;
+}
+
+/* Button group */
+.todo-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+  /* Prevents buttons from shrinking */
+}
